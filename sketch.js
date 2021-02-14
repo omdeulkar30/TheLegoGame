@@ -305,12 +305,12 @@ function draw() {
   }
   if (heroBatman.isTouching(LEGO5Group)){
 	LEGO5Group.destroyEach()
-	score = score +1
+	score = score +6
 	console.log("LEGO5Groupscore")
   }
   if (heroBatman.isTouching(LEGO6Group)){
 	LEGO6Group.destroyEach()
-	score = score +1
+	score = score +5
 	console.log("LEGO6Groupscore")           
   }
   if (heroBatman.isTouching(LEGO7Group)){
@@ -325,7 +325,7 @@ function draw() {
   }
 }
  // rand=Math.round
-  if (score>=1 && (counter==6 || counter==7 || counter==8)){
+  if (score>=15 && (counter==6 || counter==7 || counter==8)){
 	score=0
 	levelCompleteSprite(1)
 	heroBatman.destroy()
@@ -342,7 +342,7 @@ function draw() {
 	obstacleVampireGroup.destroyEach()
 	console.log("score 1")
   }
-  if (score>=2 && counter==10){  
+  if (score>=30 && counter==10){  
 	score=0
 	levelCompleteSprite(2)
 	heroBatman.destroy()
@@ -360,7 +360,7 @@ function draw() {
 	console.log("score 2")
   }
   rand=Math.round(random(1,2))
-  if ((score>=3)&&(rand==1)){
+  if ((score>=50)&&(rand==1)){
 	winnerSprite()
 	score=0
 	//levelCompleteSprite(3)
@@ -378,7 +378,7 @@ function draw() {
 	obstacleVampireGroup.destroyEach()   
 	console.log("score 3a")
   }
-  if ((score>=3)&&(rand=2)){
+  if ((score>=50)&&(rand=2)){
     winnerSprite()
 	score=0
 	//levelCompleteSprite(3)
